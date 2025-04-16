@@ -9,7 +9,7 @@ match o:
     case "-":
         print(a, o, c, "=", a-c, sep=" ")
     case "/":
-        print(a, o, c, "=", a/c, sep=" ")
+        print(a, o, c, "=", a//c, sep=" ")
     case "*":
         print(a, o, c, "=", a*c, sep=" ")
     case _:
