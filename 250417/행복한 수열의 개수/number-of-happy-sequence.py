@@ -28,6 +28,6 @@ else:
                     answer += 1
                     break
             else:
-                cnt = 0
+                cnt = 1
                 a = grid[j][i]
     print(answer)
