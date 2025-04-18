@@ -8,7 +8,8 @@ def is_beautiful(s):
     i = 0
     while i < len(s):
         num = int(s[i])
-        # 현재 숫자가 num번 연속되는지 확인
+        if i + num > len(s):
+            return False
         if s[i:i+num] != s[i] * num:
             return False
         i += num
@@ -20,7 +21,7 @@ def recur(current):
         if is_beautiful(current):
             cnt += 1
         return
-    for i in range(1, 10):
+    for i in range(1, 10):  # 1부터 9까지 사용
         recur(current + str(i))
 
 recur('')
