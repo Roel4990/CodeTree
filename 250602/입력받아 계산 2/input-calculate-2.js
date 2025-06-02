@@ -4,4 +4,6 @@ let input = fs.readFileSync(0).toString()
 
 let arr = input.split(" ").map(Number)
 
-console.log(arr[0]*arr[1])
+let product = arr.reduce((acc, val) => acc * val, 1);
+
+console.log(product)
