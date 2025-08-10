@@ -5,5 +5,8 @@ b = list(map(int, input().split()))
 # Please write your code here.
 def addWord(nums):
     return ''.join(map(str, nums))
-print("Yes" if addWord(b) in addWord(a) else "No")
+if n2 > n1:
+    print("No")
+else:
+    print("Yes" if addWord(b) in addWord(a) else "No")
     
