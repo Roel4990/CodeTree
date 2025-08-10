@@ -6,11 +6,13 @@ def is_prime_number(x):
         if x % i == 0:
             return False
     return True
+
 cnt = 0
 for i in range(a, b):
     if is_prime_number(i):
-        if sum(list(map(int, str(i)))) % 2 ==0:
-            cnt+=1
+        digit_num = sum([int(num) for num in str(i)])
+        if digit_num % 2 == 0:
+            cnt += 1
 
 print(cnt)
 
