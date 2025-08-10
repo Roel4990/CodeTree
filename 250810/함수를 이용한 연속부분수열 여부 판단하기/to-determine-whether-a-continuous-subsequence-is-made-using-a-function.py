@@ -3,10 +3,5 @@ a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 
 # Please write your code here.
-def addWord(nums):
-    return ''.join(map(str, nums))
-if n2 > n1:
-    print("No")
-else:
-    print("Yes" if addWord(b) in addWord(a) else "No")
-    
+found = any(a[i:i+n2] == b for i in range(n1 - n2 + 1))
+print("Yes" if found else "No")
