@@ -10,14 +10,16 @@ for _ in range(n):
     weather.append(w)
 
 # Please write your code here.
+all_data = list(zip(date, day, weather))
+rain_records = [record for record in all_data if record[2] == 'Rain']
+earliest_rain_record = min(rain_records)
+
 class Info:
     def __init__(self, date, day, weather):
         self.date = date
         self.day = day
         self.weather = weather
 
-min_rain_index = weather.index("Rain")
-
-info1 = Info(date[min_rain_index], day[min_rain_index], weather[min_rain_index])
+info1 = Info(earliest_rain_record[0], earliest_rain_record[1], earliest_rain_record[2])
 
 print(info1.date, info1.day, info1.weather)
