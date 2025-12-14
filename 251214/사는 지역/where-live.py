@@ -16,7 +16,12 @@ class Info:
         self.addr = addr
         self.city = city
 
-info1 = Info(name.pop(), street_address.pop(), region.pop())
+max_name = max(name)
+
+max_index = name.index(max_name)
+
+
+info1 = Info(name[max_index], street_address[max_index], region[max_index])
 
 print(f"name {info1.name}\naddr {info1.addr}\ncity {info1.city}")
 
