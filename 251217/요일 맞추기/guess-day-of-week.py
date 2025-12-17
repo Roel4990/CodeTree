@@ -9,9 +9,9 @@ day_of_month = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 count = 0
 a, b = d1, d2
 
-for i in range(1, m1+1):
+for i in range(1, m1):
     a += day_of_month[i]
-for i in range(1, m2+1):
+for i in range(1, m2):
     b += day_of_month[i]
 
 print(day_of_the_week[(b - a)%7])
