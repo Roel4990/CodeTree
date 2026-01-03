@@ -6,15 +6,13 @@ maxNum = -101
 minNum = 101
 
 for a, b in segments:
-    if a < minNum:
-        minNum = a
-    if b > maxNum:
-        maxNum = b
+    minNum = min(minNum, a)
+    maxNum = max(maxNum, b)
 
-lineList = [0 for i in range(minNum, maxNum + 1)]
+lineList = [0] * (maxNum - minNum + 1)
 
 for a, b in segments:
     for i in range(a, b):
-        lineList[i-1] += 1
+        lineList[i - minNum] += 1
 
 print(max(lineList))
