@@ -6,6 +6,6 @@ numList = [0 for _ in range(n)]
 
 for a, b in commands:
     for i in range(a, b+1):
-        numList[i] += 1
+        numList[i-1] += 1
 
 print(max(numList))
